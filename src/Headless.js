@@ -22,12 +22,18 @@ THE SOFTWARE. */
 
 (function() {
 
+    /*
+        getExtension( str:String ) => Gets the extension of the file name provided.
+    */
     function getExtension( str ) {
 
-      return str.substring(str.lastIndexOf('.') + 1);
+      return str.substring( str.lastIndexOf( '.' ) + 1 );
 
     }
 
+    /*
+        doesFileExist( fileName:String ) => Executes a simple HTTP 1.0/HEAD request to check if a file exists.
+    */
     function doesFileExist( fileName ) {
 
       var xhr = new XMLHttpRequest();
@@ -47,6 +53,7 @@ THE SOFTWARE. */
 
         var headElement    = document.getElementsByTagName( 'head' )[0].toString();
 
+        // Loads all the elements provided as argument.
         this.load = function() {
 
           /* ================================
@@ -101,6 +108,11 @@ THE SOFTWARE. */
             elements.push( tag );
 
           }
+
+
+          /* ================================
+             Adding elements to the HEAD of the document.
+          */
 
           for ( var i = 0; i < elements.length; i++ ) {
 
