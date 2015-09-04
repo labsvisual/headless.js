@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Test Page</title>
+        <script src="../src/Headless.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script>
+
+            headless([
+
+                './js/app.js',
+                './css/file1.css',
+                './css/file2.css',
+                './css/file3.css'
+
+            ]).load();
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <p>If file one load succeeded, I will become <span id="one">red</span></p>
+        <p>If file two load succeeded, I will become <span id="two">green</span></p>
+        <p>If file three load succeeded, I will become <span id="three">blue</span></p>
+
+    </body>
+
+</html>
